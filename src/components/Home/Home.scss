@@ -1,0 +1,118 @@
+// Variables
+$primary-color: #282c34;
+$secondary-color: #61dafb;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-header {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffe600;
+  border: 0;
+  position: relative;
+}
+
+.nav-area {
+  display: contents;
+  flex-direction: row;
+}
+
+.nav-logo {
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-indent: -999px;
+  background-image: url(https://play-lh.googleusercontent.com/qdUwE-lJu1sqVrPt0gxUF4qMbn0ihlZiFn4nhlCS8HwTmqbmALLNqjAkZFFJ2VMD1Q=w480-h960-rw);
+  height: 100%;
+  width: 134px;
+  display: flex;
+  position: static;
+  left: 0;
+  top: 0;
+  background-size: contain;
+}
+
+.nav-search {
+  z-index: 910;
+  will-change: left;
+  transition: left .15s ease-out;
+  top: 0;
+  right: 45px;
+  max-width: 720px;
+  left: -1px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  position: relative;
+  overflow: visible;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.nav-header-visually-hidden {
+  position: absolute;
+  z-index: -1;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  margin: 0 -1px -1px 0;
+  overflow: hidden;
+  padding: 0;
+  display: block;
+}
+
+.nav-search-btn, button.nav-search-btn:before {
+  padding: 0;
+  z-index: auto;
+  position: static;
+  border: none;
+  font-size: 22px;
+  color: #666;
+  line-height: 1em;
+  border-radius: 0 2px 2px 0;
+  width: 46px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  height: 40px;
+  cursor: pointer;
+  box-shadow: none;
+  content: "🔍";
+}
+
+input[type=search].nav-search-input {
+  position: relative;
+  z-index: 915;
+  color: rgba(0, 0, 0, .8980392157);
+  font-size: 16px;
+  margin: 0;
+  font-family: inherit;
+  border-radius: 2px;
+  background-color: #fff;
+  display: flex;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+  height: 80px;
+  width: 100%;
+  padding: 10px 60px 10px 15px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0);
+  border-width: 1.5px;
+}
+
+.nav-search-prop {
+  width: 100%;
+  height: 35px;
+  border: none;
+}
